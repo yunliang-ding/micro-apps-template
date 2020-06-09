@@ -1,0 +1,33 @@
+html,body{
+  padding:0;
+  margin:0;
+  background: #1e1e1e;
+  overflow: hidden;
+  font-family: -apple-system,BlinkMacSystemFont,sans-serif !important;
+}
+div{
+  box-sizing: border-box;
+}
+::-webkit-scrollbar { /*滚动条整体样式*/
+  width: 0;     /*高宽分别对应横竖滚动条的尺寸*/
+  height: 0;
+}
+.load-spin{
+  height:100vh;
+  width:100vw;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.load-spin-iconfont{
+  font-size:60px;
+  color: #9a9a9a;
+  animation:load-spin-move 3s linear infinite;
+}
+@keyframes load-spin-move{
+  0%{-webkit-transform:rotate(0deg);}
+  25%{-webkit-transform:rotate(90deg);}
+  50%{-webkit-transform:rotate(180deg);}
+  75%{-webkit-transform:rotate(270deg);}
+  100%{-webkit-transform:rotate(360deg);}
+}
