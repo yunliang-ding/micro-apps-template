@@ -1,8 +1,4 @@
-node_modules/
-
-out/log
-out/public/app.js
-out/node_modules
-
-.vscode/
-.DS_Store
+node_modules
+src/.cache
+dist
+src/.DS_Store
