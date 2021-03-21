@@ -3,13 +3,14 @@ const htmlwebpackplugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 module.exports = {
-  entry: "./src/index.js",
+  entry: "./src/index.tsx",
   mode: "development",
   output: {
     path: path.resolve(__dirname, "./dist"),
     filename: "app.js",
   },
   resolve: {
+    extensions: [".ts", ".tsx", ".js", ".jsx"], //表示在import 文件时文件后缀名可以不写
     alias: {
       "@": path.resolve(__dirname, "src"),
     },
@@ -17,10 +18,10 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js[x]?$/,
+        test: /\.ts[x]?$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader",
+          loader: "ts-loader",
         },
       },
       {
@@ -59,7 +60,7 @@ module.exports = {
   devServer: {
     contentBase: "./dist",
     // open: true,
-    port: 8080,
+    port: 3000,
   },
   plugins: [
     new htmlwebpackplugin({
