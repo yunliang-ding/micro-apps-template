@@ -1,5 +1,5 @@
 {
-  "name": "my-learn-start",
+  "name": "react-base",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -12,6 +12,7 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.13.1",
+    "@babel/plugin-transform-runtime": "^7.13.10",
     "@babel/preset-env": "^7.13.0",
     "@babel/preset-react": "^7.12.13",
     "autoprefixer": "^10.1.0",
@@ -33,5 +34,8 @@
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.13.10"
   }
 }
